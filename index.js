@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const RegisterModel = require("./model/Register");
+const PORT = process.env.PORT || 3001
 
 const app = express();
 app.use(cors());
@@ -68,6 +69,6 @@ app.get("/users", async (req, res) => {
 });
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log("Server is running on port 3001");
 });
